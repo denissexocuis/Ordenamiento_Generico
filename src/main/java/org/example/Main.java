@@ -19,8 +19,9 @@ public class Main {
 
         Imprimir (resultFloat);
 
-        //fallar con esto
         String [] strVector = {"zz", "aa", "cc", "hh", "bb", "ee", "ll"};
+
+        // esto falla
         //String [] resultStr = Utils.ordena(strVector, 0, strVector.length-1);
     }
 
