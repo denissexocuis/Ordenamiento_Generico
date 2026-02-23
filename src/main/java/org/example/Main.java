@@ -1,17 +1,36 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        Integer [] intVector = { 101, 99, 12, 19, 21, 111, 345, 25, 77, 81 };
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+        Imprimir(intVector);
+
+        Integer [] resultInt = Utils.ordena (intVector, 0, intVector.length-1);
+
+        Imprimir(resultInt);
+
+
+        Float [] floatVector = {19.1f, 456.6f, 23.45f, 12.34f, 11.11f, 354.55f, 78.45f, 28.33f, 45.99f, 108.88f };
+
+        Imprimir(floatVector);
+
+        Float [] resultFloat = Utils.ordena(floatVector, 0, floatVector.length-1);
+
+        Imprimir (resultFloat);
+
+        //fallar con esto
+        String [] strVector = {"zz", "aa", "cc", "hh", "bb", "ee", "ll"};
+        //String [] resultStr = Utils.ordena(strVector, 0, strVector.length-1);
+    }
+
+
+    public static void Imprimir(Number [] array)
+    {
+        System.out.println(" ");
+        for(int i=array.length-1; i >=0; i--)
+        {
+            System.out.printf("%s ", array[i]);
         }
     }
 }
